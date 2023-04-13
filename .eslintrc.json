@@ -31,11 +31,7 @@
   "overrides": [
     { "files": ["./**/*.test.{ts,tsx}"], "env": { "jest": true } },
     {
-      "files": [
-        "./gql/schema.ts",
-        "./gql/queries/*.graphql",
-        "./gql/resolvers.ts"
-      ],
+      "files": ["./gql/schema.ts", "./gql/queries/*.graphql"],
       "processor": "@graphql-eslint/graphql"
     },
     {

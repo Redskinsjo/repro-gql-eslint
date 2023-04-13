@@ -3,5 +3,6 @@ query GetUser($email: String) {
     email
     fullname
     picture
+    picture
   }
 }

@@ -1,14 +1,16 @@
 const resolvers = {
   Query: {
-    user: async (_: unknown, args: any) => {
+    user: async () => {
       const user = {};
       return user;
     },
   },
   Mutation: {
-    createUser: async (_: unknown, args: any) => {
+    createUser: async () => {
       const createdUser = {};
       return createdUser;
     },
   },
 };
+
+export default resolvers;
