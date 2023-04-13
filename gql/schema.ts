@@ -8,6 +8,7 @@ const typeDefs = gql`
     lastname: String
     fullname: String
     picture: String
+    picture: String
   }
 
   input UserInput {
