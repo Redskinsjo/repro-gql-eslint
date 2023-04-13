@@ -276,17 +276,6 @@
     tslib "^2.4.0"
     ws "8.13.0"
 
-"@graphql-tools/executor@^0.0.15":
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/@graphql-tools/executor/-/executor-0.0.15.tgz#cbd29af2ec54213a52f6c516a7792b3e626a4c49"
-  integrity sha512-6U7QLZT8cEUxAMXDP4xXVplLi6RBwx7ih7TevlBto66A/qFp3PDb6o/VFo07yBKozr8PGMZ4jMfEWBGxmbGdxA==
-  dependencies:
-    "@graphql-tools/utils" "9.2.1"
-    "@graphql-typed-document-node/core" "3.1.2"
-    "@repeaterjs/repeater" "3.0.4"
-    tslib "^2.4.0"
-    value-or-promise "1.0.12"
-
 "@graphql-tools/executor@^0.0.16":
   version "0.0.16"
   resolved "https://registry.yarnpkg.com/@graphql-tools/executor/-/executor-0.0.16.tgz#6c7cfbc04c05149b8dd6630f9debeb0293e806d5"
@@ -339,6 +328,15 @@
     globby "^11.0.3"
     tslib "^2.4.0"
     unixify "^1.0.0"
+
+"@graphql-tools/load-files@^6.6.1":
+  version "6.6.1"
+  resolved "https://registry.yarnpkg.com/@graphql-tools/load-files/-/load-files-6.6.1.tgz#91ce18d910baf8678459486d8cccd474767bec0a"
+  integrity sha512-nd4GOjdD68bdJkHfRepILb0gGwF63mJI7uD4oJuuf2Kzeq8LorKa6WfyxUhdMuLmZhnx10zdAlWPfwv1NOAL4Q==
+  dependencies:
+    globby "11.1.0"
+    tslib "^2.4.0"
+    unixify "1.0.0"
 
 "@graphql-tools/load@^7.5.5":
   version "7.8.13"
@@ -406,11 +404,6 @@
     tslib "^2.4.0"
     value-or-promise "1.0.12"
 
-"@graphql-typed-document-node/core@3.1.2":
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/@graphql-typed-document-node/core/-/core-3.1.2.tgz#6fc464307cbe3c8ca5064549b806360d84457b04"
-  integrity sha512-9anpBMM9mEgZN4wr2v8wHJI2/u5TnnggewRN6OlvXTTnuVyoY19X6rOv9XTqKRw6dcGKwZsBi8n0kDE2I5i4VA==
-
 "@graphql-typed-document-node/core@3.2.0", "@graphql-typed-document-node/core@^3.1.1":
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/@graphql-typed-document-node/core/-/core-3.2.0.tgz#5f3d96ec6b2354ad6d8a28bf216a1d97b5426861"
@@ -421,6 +414,14 @@
   resolved "https://registry.yarnpkg.com/@graphql-yoga/logger/-/logger-0.0.1.tgz#48504fa6ecaee487d9df00fd44c28e356635a324"
   integrity sha512-6npFz7eZz33mXgSm1waBLMjUNG0D5hTc/p5Hcs1mojkT3KsLpCOFokzTEKboNsBhKevYcaVa/xeA7WBj4UYMLg==
   dependencies:
+    tslib "^2.3.1"
+
+"@graphql-yoga/node@^3.9.0":
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/@graphql-yoga/node/-/node-3.9.0.tgz#d50f53914eba62ee13770d873e40ba55130d6b42"
+  integrity sha512-KEaHVH5uNoL3XGyODEdAcjfbAedap89KZS577lh1/9Nto+vWIsX2k25ynMCFFkfettdbSLY2FA2c0/QZbpyYfA==
+  dependencies:
+    graphql-yoga "3.9.0"
     tslib "^2.3.1"
 
 "@graphql-yoga/subscription@^3.1.0":
@@ -1810,7 +1811,7 @@ globalyzer@0.1.0:
   resolved "https://registry.yarnpkg.com/globalyzer/-/globalyzer-0.1.0.tgz#cb76da79555669a1519d5a8edf093afaa0bf1465"
   integrity sha512-40oNTM9UfG6aBmuKxk/giHn5nQ8RVz/SS4Ir6zgzOv9/qC3kKZ9v4etGTcJbEl/NyVQH7FGU7d+X1egr57Md2Q==
 
-globby@^11.0.3, globby@^11.1.0:
+globby@11.1.0, globby@^11.0.3, globby@^11.1.0:
   version "11.1.0"
   resolved "https://registry.yarnpkg.com/globby/-/globby-11.1.0.tgz#bd4be98bb042f83d796f7e3811991fbe82a0d34b"
   integrity sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==
@@ -1891,14 +1892,14 @@ graphql-ws@5.12.1:
   resolved "https://registry.yarnpkg.com/graphql-ws/-/graphql-ws-5.12.1.tgz#c62d5ac54dbd409cc6520b0b39de374b3d59d0dd"
   integrity sha512-umt4f5NnMK46ChM2coO36PTFhHouBrK9stWWBczERguwYrGnPNxJ9dimU6IyOBfOkC6Izhkg4H8+F51W/8CYDg==
 
-graphql-yoga@^3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/graphql-yoga/-/graphql-yoga-3.8.0.tgz#329bcf960eb4e954106e7b5974edbb60ccff8a04"
-  integrity sha512-tCjPeVL+IiTXi9s3oKtLxHTqML/foBhoO4FTuNzosWAsgNybUX7HSnGyPAKoHv0OusYW8KwiU/xFR95wFHvcFw==
+graphql-yoga@3.9.0, graphql-yoga@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/graphql-yoga/-/graphql-yoga-3.9.0.tgz#d524a76de9fca95305f5fc5003ca22959966e329"
+  integrity sha512-iHHY8iGBd++p1lLoIAknNc6cFTjkKjD7kFYp8zP+svv87SVM1sx0ep+0EHTT+Ye11ZGW375REbYgS3P46x+Kkw==
   dependencies:
     "@envelop/core" "^3.0.4"
     "@envelop/validation-cache" "^5.1.2"
-    "@graphql-tools/executor" "^0.0.15"
+    "@graphql-tools/executor" "^0.0.16"
     "@graphql-tools/schema" "^9.0.0"
     "@graphql-tools/utils" "^9.2.1"
     "@graphql-yoga/logger" "^0.0.1"
@@ -3167,7 +3168,7 @@ unbox-primitive@^1.0.2:
     has-symbols "^1.0.3"
     which-boxed-primitive "^1.0.2"
 
-unixify@^1.0.0:
+unixify@1.0.0, unixify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unixify/-/unixify-1.0.0.tgz#3a641c8c2ffbce4da683a5c70f03a462940c2090"
   integrity sha512-6bc58dPYhCMHHuwxldQxO3RRNZ4eCogZ/st++0+fcC1nr0jiGUtAdBJ2qzmLQWSxbtz42pWt4QQMiZ9HvZf5cg==
